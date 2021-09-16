@@ -1,0 +1,19 @@
+ul>li{
+    font-size: 1.5rem;
+    list-style: none;
+}
+h1{
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+h2{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.add-items{
+    width: 75%;
+}
+.button_add{
+    border-radius: 12px;
+    padding-bottom: 0.8rem;
+}

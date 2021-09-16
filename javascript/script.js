@@ -8,10 +8,14 @@ let app = new Vue({
     el:'#app',
     data:{
         toDoList:["uova","pane","latte","spaghetti","peperoni","pere","mozzarella di bufala"],
+        addToDoList:"",
     },
     methods:{
         removeItem: function(index){
             this.toDoList.splice(index , 1);
         },
+        addItem: function(item){
+            this.addToDoList.trim().toLowerCase().pop(item);
+        }
     }
 });
