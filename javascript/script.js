@@ -15,10 +15,13 @@ let app = new Vue({
             this.toDoList.splice(index , 1);
         },
         addItem: function(){
-            this.toDoList.push(this.addToDoList);
-        },
+            if(this.addToDoList.trim().length > 0){
+                this.toDoList.push(this.addToDoList.trim().toLowerCase());
+                this.addToDoList = '';
+            }
+        },  
         addKeyUp: function(){
-            this.toDoList.push(this.addToDoList);
+            this.addItem();
         },
-    }
+    },
 });
