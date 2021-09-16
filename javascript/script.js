@@ -9,5 +9,9 @@ let app = new Vue({
     data:{
         toDoList:["uova","pane","latte","spaghetti","peperoni","pere","mozzarella di bufala"],
     },
-    methods:{}
+    methods:{
+        removeItem: function(index){
+            this.toDoList.splice(index , 1);
+        },
+    }
 });

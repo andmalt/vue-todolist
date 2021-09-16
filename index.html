@@ -25,7 +25,7 @@
                 <div>
                     <h1>Lista della spesa</h1>
                     <ul>
-                        <li v-for="(element, index) in toDoList">{{ element }} <i class="far fa-times-circle"></i></li>
+                        <li v-for="(element, index) in toDoList">{{ element }} <i @click="removeItem" class="far fa-times-circle"></i></li>
                     </ul>
                 </div>
             </div>
