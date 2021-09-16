@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,14 +26,14 @@
                     <!-- input add item to do list -->
                     <div class="col-12 col-md-6 text-center p-5">
                         <h2 class="pb-4">Inserisci un oggetto</h2>
-                        <input type="text" placeholder="Inserisci un oggetto nella lista" class="add-items mb-3">
-                        <button class=" btn-lg button_add">Aggiungi</button>
+                        <input type="text" placeholder="Inserisci un oggetto nella lista" class="add-items mb-3" v-model="addToDoList" @keyup.enter="addKeyUp">
+                        <button @click="addItem" class=" btn-lg button_add">Aggiungi</button>
                     </div>
                     <!-- to do list  -->
                     <div class="col-12 col-md-6 p-5">
                         <h1 class="pb-2">Lista della spesa</h1>
                         <ul>
-                            <li v-for="(element, index) in toDoList" class="d-flex justify-content-between align-items-center">{{ element }} <i @click="removeItem" class="far fa-times-circle"></i></li>
+                            <li v-for="(element, index) in toDoList" class="d-flex justify-content-between align-items-center">{{ element }}<i @click="removeItem(index)" class="far fa-times-circle"></i></li>
                         </ul>
                     </div>
                 </div>
