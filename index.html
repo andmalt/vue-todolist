@@ -20,9 +20,14 @@
 </head>
 <body>
     <main id="app" class="container-fluid p-4">
-        <div class="row">
-            <div class="col-12">
-
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div>
+                    <h1>Lista della spesa</h1>
+                    <ul>
+                        <li v-for="(element, index) in toDoList">{{ element }} <i class="far fa-times-circle"></i></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>

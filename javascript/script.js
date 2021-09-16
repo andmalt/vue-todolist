@@ -6,6 +6,8 @@
 
 let app = new Vue({
     el:'#app',
-    data:{},
+    data:{
+        toDoList:["uova","pane","latte","spaghetti","peperoni","pere","mozzarella di bufala"],
+    },
     methods:{}
 });
